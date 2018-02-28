@@ -1,0 +1,2050 @@
+::-webkit-input-placeholder { /* Chrome */
+  color: #666;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #666;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #666;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #666;
+  opacity: 1;
+}
+
+a {
+  color: #000
+}
+
+
+@-moz-keyframes ripple {
+  5%,
+  100% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes ripple {
+  5%,
+  100% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+}
+@keyframes ripple {
+  5%,
+  100% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+}
+
+* {
+  outline: none;
+}
+body,
+html {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+@font-face {
+  font-family: 'Upheaval Pro';
+  src: url('../fonts/UpheavalPro-Regular.eot');
+  src: url('../fonts/UpheavalPro-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/UpheavalPro-Regular.woff') format('woff'), url('../fonts/UpheavalPro-Regular.ttf') format('truetype');
+}
+btn:hover,
+btn:focus,
+btn:active,
+btn:vizited {
+  outline: none;
+}
+.title {
+  font-family: 'Upheaval Pro', sans-serif;
+  font-size: 4.8rem;
+  font-style: italic;
+  color: #ff3630;
+  margin-top: 9rem;
+}
+.btn {
+  width: 240px;
+  height: 55px;
+  background: url(../img/btn.png) no-repeat top center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #000;
+  font-family: 'Upheaval Pro', sans-serif;
+  font-size: 2rem;
+  line-height: 55px;
+  -webkit-box-shadow: 0 9px 5px -1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 9px 5px -1px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  cursor: pointer;
+  font-style: italic;
+  border: 0;
+  outline: none;
+}
+.btn:hover {
+  background: url(../img/btn-hover.png) no-repeat top center;
+  color: #00fffc;
+}
+
+/* Главный экран */
+.registration {
+  height: 100%;
+  background: url(../img/main-bg.jpg) center no-repeat;
+  background-size: cover;
+  padding-top: 1rem;
+  padding-bottom: 18rem;
+  /* .radio input:focus + .radio__text:before {
+    box-shadow: 0 0 0 3px rgba(255,255,0,.7);
+  }  */
+}
+.registration .logo {
+  text-align: center;
+}
+.registration-block {
+  margin-top: 5.5rem;
+  padding-bottom: 10rem;
+  border: 4px dotted #0094ff;
+  text-align: center;
+}
+.registration-block-form {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+/*style from dima*/
+.form__inner {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.group__left { /* Chrome */
+  flex-basis: 44%;;
+  
+}
+
+.group__right { /* Chrome */
+  flex-basis: 44%;;
+  
+}
+
+.group__btn { /* Chrome */
+  flex-basis: 100%; /* Chrome */
+  display: flex; /* Chrome */
+  justify-content: space-around;;;;
+  
+}
+
+.input__item {
+  width: 100%;
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 1rem;
+  padding: 1.3rem;
+  padding-left: 2rem;
+  background-color: #15497f;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+.input__item:focus {
+  background-color: #0f62a2;
+  border: 0
+}
+
+.group-radio {
+  display: flex;
+}
+
+.radio__item { /* Chrome */
+  display: flex;
+  
+}
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  position: relative;
+  cursor: pointer;
+  margin: 20px;
+  padding-left: 28px;
+}
+input[type="radio"] + label:before, input[type="radio"] + label:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+input[type="radio"] + label:before {
+  top: 20px;
+  left: -20px;
+  width: 18px;
+  height: 18px;
+  background: #1565c0;
+  -moz-box-shadow: inset 0 0 0 18px #e0e0e0;
+  -webkit-box-shadow: inset 0 0 0 18px #e0e0e0;
+  box-shadow: inset 0 0 0 18px #e0e0e0;
+}
+input[type="radio"] + label:after {
+  top: 49%;
+  left: -10px;
+  width: 54px;
+  height: 54px;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.3);
+  -moz-transform: translate(-50%, -50%) scale(0);
+  -ms-transform: translate(-50%, -50%) scale(0);
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+}
+
+input[type="radio"]:checked + label:before {
+  -moz-box-shadow: inset 0 0 0 4px #e0e0e0;
+  -webkit-box-shadow: inset 0 0 0 4px #e0e0e0;
+  box-shadow: inset 0 0 0 4px #e0e0e0;
+}
+input[type="radio"]:checked + label:after {
+  -moz-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  -moz-animation: ripple 1s none;
+  -webkit-animation: ripple 1s none;
+  animation: ripple 1s none;
+}
+
+.img-women{
+  width: 6rem;
+  height: 6rem;
+  background: url(../img/women.png)  no-repeat;
+  background-size: cover;
+}
+
+.img-men {
+  width: 6rem;
+  height: 6rem;
+  background: url(../img/men.png)  no-repeat;
+  background-size: cover;
+}
+
+.registration .radio input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 7px;
+}
+.registration .radio__text {
+  position: relative;
+  padding: 0 0 0 35px;
+  cursor: pointer;
+}
+.registration .radio__text-men {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6rem;
+  height: 6rem;
+  background: url(../img/men.png) center no-repeat;
+  background-size: cover;
+}
+.registration .radio__text-women {
+  width: 6rem;
+  height: 6rem;
+  background: url(../img/women.png) center no-repeat;
+  background-size: cover;
+}
+.registration .radio__text:before {
+  content: '';
+  position: absolute;
+  top: 2.5rem;
+  left: 6rem;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #CDD1DA;
+  border-radius: 50%;
+  background: #ffffff;
+}
+.registration .radio__text:after {
+  content: '';
+  position: absolute;
+  top: 3rem;
+  left: 6.4rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #15497f;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: .2s;
+}
+.registration .radio input:checked + .radio__text:after {
+  opacity: 1;
+}
+/* Страница поиска */
+.search__form { /* Chrome */
+  display: flex; /* Chrome */
+  justify-content: center;;
+  
+}
+
+.table__item {
+  height: 80px;
+}
+
+.search {
+  padding-top: 1rem;
+  padding-bottom: 26rem;
+  background: url(../img/search/bg.jpg) center no-repeat;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+}
+.search .logo {
+  padding-top: 2rem;
+  position: relative;
+}
+.search .logo:before {
+  content: '';
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  top: 17rem;
+  left: -13rem;
+  background: url(../img/search/1.png) center no-repeat;
+  background-size: cover;
+}
+.search .logo:after {
+  content: '';
+  position: absolute;
+  width: 20rem;
+  height: 35rem;
+  top: 46rem;
+  right: -100rem;
+  background: url(../img/search/2.png) center no-repeat;
+  background-size: cover;
+}
+.search .avatar {
+  padding-top: 2rem;
+  text-align: left;
+}
+.search .avatar-img {
+  padding: 2rem 0;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 5px solid #213f71;
+  box-shadow: #1e2852 0 0 24px 12px;
+  background: url(../img/search/avatar.png) center center no-repeat;
+  background-size: 100%;
+}
+.search .avatar-name .dropdown {
+  padding-top: 1rem;
+}
+.dropdown-toggle {
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+.dropdown-menu {
+  font-size: 1.8rem;
+  color: #ffffff;
+  background-color: transparent;
+  left: 0.8rem;
+  border: none;
+  border-radius: none;
+  box-shadow: none;
+}
+.search h1 {
+  margin-top: 6.5rem;
+  margin-bottom: 40px;;
+}
+.search form {
+  position: relative;
+}
+.search form input {
+  font-size: 1.8rem;
+  color: #ffffff;
+  border: none;
+  border-radius: 1rem;
+  background: linear-gradient(to right, #005aad, #0089e3);
+  padding: 1.2rem 2rem;
+  flex-basis: 40%;;;;
+}
+/*.search form .btn {
+  right: -3.5rem;
+}*/
+.search form .btn:hover {
+  background: url(../img/search/btn-1hover.png) center no-repeat;
+}
+.search-tab {
+  margin-left: -3rem;
+  margin-top: 3.5rem;
+}
+.search-tab-avatar {
+  text-align: left;
+}
+.user__avatar {
+  display: inline-block;
+  padding: 2rem 0;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 5px solid #213f71;
+  box-shadow: #1e2852 0 0 20px 12px;
+  background: url(../img/search/avatar.png) center center no-repeat;
+  background-size: 100%;
+}
+
+.search-tab-avatar-name {
+  display: inline-block;
+}
+.search-tab-bg {
+  background-color: #1a2d57;
+}
+.search-tab-left {
+  padding: 1rem 0;
+  text-align: left!important;
+}
+.search-tab table {
+  border-collapse: collapse;
+  border: 3px solid #00a5ff;
+  width: 100%;
+}
+.search-tab table th,
+.search-tab table td {
+  padding: 0 3rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: center;
+  border-right: 3px solid #00a5ff;
+}
+.search-tab table th {
+  padding: 2rem 3rem;
+}
+.search-tab table td h2 {
+  margin-left: 3rem;
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.search-tab table td .btn {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  width: 21rem;
+  color: #0e0023;
+  font-size: 1.8rem;
+  background: url(../img/search/btn-2.png) center no-repeat;
+  line-height: 43px;;
+}
+.search-tab table td .btn:hover {
+  background: url(../img/search/btn-2hover.png) center no-repeat;
+  color: #00fffc;
+}
+
+/*media for search*/
+
+@media only screen and (max-width: 425px) {
+  .media-left {
+    display: none;
+  }
+  .search-content {
+    
+  }
+  .search__form {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .search-tab table th, .search-tab table td { /* Chrome */
+  padding: 10px;;
+    
+  }
+  .search-tab table td h2 {
+    
+  }
+  .search-tab .btn {
+    width: 140px!important;
+    height: 37px!important;
+    line-height: 30px!important;
+    font-size: 12px!important;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  
+}
+
+/*end media for search*/
+
+.create .logo {
+  padding-top: 2rem;
+  position: relative;
+}
+.create .logo:before {
+  content: '';
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  top: 17rem;
+  left: -13rem;
+  background: url(../img/search/1.png) center no-repeat;
+  background-size: cover;
+}
+.create .logo:after {
+  content: '';
+  position: absolute;
+  width: 20rem;
+  height: 35rem;
+  top: 46rem;
+  right: -100rem;
+  background: url(../img/search/2.png) center no-repeat;
+  background-size: cover;
+}
+.create .avatar {
+  padding-top: 2rem;
+  text-align: left;
+}
+.create .avatar-img {
+  padding: 2rem 0;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 5px solid #213f71;
+  box-shadow: #1e2852 0 0 24px 12px;
+  background: url(../img/search/avatar.png) center center no-repeat;
+  background-size: 100%;
+}
+.create .avatar-name .dropdown {
+  padding-top: 1rem;
+}
+.create .avatar-name .dropdown btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+.create .avatar-name .dropdown-menu {
+  font-size: 1.8rem;
+  color: #ffffff;
+  background-color: transparent;
+  left: 0.8rem;
+  border: none;
+  border-radius: none;
+  box-shadow: none;
+}
+.create h1 {
+  margin-top: 5.8rem;
+}
+.create-block {
+  margin-top: 9.5rem;
+}
+.create-block-avatar {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  width: 100%;
+  background-color: #141731;
+  border-radius: 1rem;
+}
+.create-block-avatar-img {
+  display: inline-block;
+  width: 13.5rem;
+  height: 13.5rem;
+  border-radius: 50%;
+  border: 5px solid #4e2c59;
+  box-shadow: #31254d 0 0 20px 12px;
+  background: url(../img/create/ava.png) center center no-repeat;
+  background-size: 100%;
+}
+.create-block-avatar .btn {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  background-color: transparent;
+  width: 100%;
+  background: url(../img/create/btn-1.png) center no-repeat;
+  height: 55px;
+}
+.create-block-avatar .btn:hover {
+}
+.create-block-avatar .btn a {
+  color: #ffffff;
+}
+.create-block-avatar .btn a:hover {
+  color: #0e0023;
+}
+.create-block-form {
+  margin-top: -1.5rem;
+  text-align: right;
+}
+.create-block-form .btn {
+  float: right;
+}
+/* Страница ваша команда */
+.yourteam {
+  padding-top: 1rem;
+  padding-bottom: 15rem;
+  background: url(../img/search/bg.jpg) center no-repeat;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+}
+.yourteam .logo {
+  padding-top: 2rem;
+  position: relative;
+}
+.yourteam .logo:before {
+  content: '';
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  top: 17rem;
+  left: -13rem;
+  background: url(../img/search/1.png) center no-repeat;
+  background-size: cover;
+}
+.yourteam .logo:after {
+  content: '';
+  position: absolute;
+  width: 20rem;
+  height: 35rem;
+  top: 7rem;
+  right: -100rem;
+  background: url(../img/search/2.png) center no-repeat;
+  background-size: cover;
+}
+.yourteam .avatar {
+  padding-top: 2rem;
+  text-align: left;
+}
+.yourteam .avatar-img {
+  padding: 2rem 0;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 5px solid #213f71;
+  box-shadow: #1e2852 0 0 24px 12px;
+  background: url(../img/search/avatar.png) center center no-repeat;
+  background-size: 100%;
+}
+.yourteam .avatar-name .dropdown {
+  padding-top: 1rem;
+}
+.yourteam .avatar-name .dropdown btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+.yourteam .avatar-name .dropdown-menu {
+  font-size: 1.8rem;
+  color: #ffffff;
+  background-color: transparent;
+  left: 0.8rem;
+  border: none;
+  border-radius: none;
+  box-shadow: none;
+}
+.yourteam h1 {
+  margin-top: 5.8rem;
+}
+.yourteam-block {
+  margin-top: 9rem;
+}
+.yourteam-block-profile {
+  padding: 4.5rem 3.5rem;
+  text-align: center;
+  width: 100%;
+  background-color: #141731;
+  border-radius: 1rem;
+}
+.yourteam-block-profile h2 {
+  position: relative;
+  margin: 0;
+  font-family: 'Upheaval Pro', sans-serif;
+  font-size: 3.6rem;
+  font-style: italic;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 4px #101026;
+  color: #0094ff;
+}
+.yourteam-block-profile h2:after {
+  content: '';
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url(../img/yourteam/pen.png) center no-repeat;
+  background-size: cover;
+  top: -0.5rem;
+  right: -0.5rem;
+}
+.yourteam-block-profile-avatar-img {
+  position: relative;
+  margin-top: 5rem;
+  display: inline-block;
+  width: 13.5rem;
+  height: 13.5rem;
+  border-radius: 50%;
+  border: 5px solid #4e2c59;
+  box-shadow: #31254d 0 0 40px 12px;
+  background: url(../img/create/ava.png) center center no-repeat;
+  background-size: 100%;
+}
+.yourteam-block-profile-avatar-img:after {
+  content: '';
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  background: url(../img/yourteam/pen2.png) center no-repeat;
+  background-size: cover;
+  bottom: 0.5rem;
+  right: 0;
+}
+.yourteam-block-profile h3 {
+  margin-top: 5.5rem;
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+.yourteam-block-profile a {
+  font-size: 1.8rem;
+  color: #0a8ef0;
+  text-decoration: underline;
+}
+.yourteam-block-profile a:hover {
+  color: #36a5f7;
+}
+.yourteam-block-profile p {
+  position: relative;
+  margin-top: 2.5rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+.yourteam-block-profile p:after {
+  content: '';
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url(../img/yourteam/pen.png) center no-repeat;
+  background-size: cover;
+  top: -0.9rem;
+  right: -0.5rem;
+}
+.yourteam-block-profile .btn {
+  margin-top: 4.5rem;
+  font-size: 1.8rem;
+  background-color: transparent;
+  width: 20.2rem;
+  display: inline-block;
+  background-size: 100%;
+  line-height: 40px;
+}
+.yourteam-block-profile .btn:hover {
+  background: url(../yourteam/btn.png) center no-repeat;
+}
+.yourteam-block-profile .btn a {
+  text-decoration: none;
+  color: #0e0023;
+  transition: all 0.5s;
+}
+.yourteam-block-profile .btn a:hover {
+  color: #00fffc;
+}
+.yourteam-block-tab {
+  width: 100%;
+}
+.yourteam-block-tab .search-tab-avatar {
+  padding: 1rem 0;
+}
+.yourteam-block-tab table {
+  border-collapse: collapse;
+  border: 1px solid #00a5ff;
+  width: 100%;
+}
+.yourteam-block-tab table th,
+.yourteam-block-tab table td {
+  padding: 0 4rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;;
+  vertical-align: middle;
+  border-right: 1px solid #00a5ff;
+}
+.yourteam-block-tab table th {
+  padding: 2.5rem 4rem;
+}
+.yourteam-block-tab table td h2 {
+  margin-left: 6rem;
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.yourteam-block-tab table td a {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+
+
+/* Страница ваша команда (как видит участник) */
+.yourteam-member {
+  padding-top: 1rem;
+  padding-bottom: 15rem;
+  background: url(../img/search/bg.jpg) center no-repeat;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+}
+.yourteam-member .logo {
+  padding-top: 2rem;
+  position: relative;
+}
+.yourteam-member .logo:before {
+  content: '';
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  top: 17rem;
+  left: -13rem;
+  background: url(../img/search/1.png) center no-repeat;
+  background-size: cover;
+}
+.yourteam-member .logo:after {
+  content: '';
+  position: absolute;
+  width: 20rem;
+  height: 35rem;
+  top: 46rem;
+  right: -100rem;
+  background: url(../img/search/2.png) center no-repeat;
+  background-size: cover;
+}
+.yourteam-member .avatar {
+  padding-top: 2rem;
+  text-align: left;
+}
+.yourteam-member .avatar-img {
+  padding: 2rem 0;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 5px solid #213f71;
+  box-shadow: #1e2852 0 0 24px 12px;
+  background: url(../img/search/avatar.png) center center no-repeat;
+  background-size: 100%;
+}
+.yourteam-member .avatar-name .dropdown {
+  padding-top: 1rem;
+}
+.yourteam-member .avatar-name .dropdown btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+.yourteam-member .avatar-name .dropdown-menu {
+  font-size: 1.8rem;
+  color: #ffffff;
+  background-color: transparent;
+  left: 0.8rem;
+  border: none;
+  border-radius: none;
+  box-shadow: none;
+}
+.yourteam-member h1 {
+  margin-top: 5.8rem;
+}
+.yourteam-member-block {
+  margin-top: 9rem;
+}
+.yourteam-member-block-profile {
+  padding: 4.5rem 3.5rem;
+  text-align: center;
+  width: 100%;
+  background-color: #141731;
+  border-radius: 1rem;
+}
+.yourteam-member-block-profile h2 {
+  position: relative;
+  margin: 0;
+  font-family: 'Upheaval Pro', sans-serif;
+  font-size: 3.6rem;
+  font-style: italic;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 4px #101026;
+  color: #0094ff;
+}
+.yourteam-member-block-profile-avatar-img {
+  position: relative;
+  margin-top: 5rem;
+  display: inline-block;
+  width: 13.5rem;
+  height: 13.5rem;
+  border-radius: 50%;
+  border: 5px solid #4e2c59;
+  box-shadow: #31254d 0 0 40px 12px;
+  background: url(../img/create/ava.png) center center no-repeat;
+  background-size: 100%;
+}
+.yourteam-member-block-profile h3 {
+  margin-top: 5.5rem;
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+.yourteam-member-block-profile a {
+  font-size: 1.8rem;
+  color: #0a8ef0;
+  text-decoration: underline;
+}
+.yourteam-member-block-profile a:hover {
+  color: #36a5f7;
+}
+.yourteam-member-block-profile p {
+  position: relative;
+  margin-top: 2.5rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+.yourteam-member-block-profile .btn {
+  margin-top: 4.5rem;
+  font-size: 1.8rem;
+  background-color: transparent;
+  width: 20.2rem;
+  display: inline-block;
+  background-size: 100%;
+  line-height: 43px
+}
+.yourteam-member-block-profile .btn:hover {
+  background: url(../yourteam/btn.png) center no-repeat;
+}
+.yourteam-member-block-profile .btn a {
+  text-decoration: none;
+  color: #0e0023;
+  transition: all 0.5s;
+}
+.yourteam-member-block-profile .btn a:hover {
+  color: #00fffc;
+}
+.yourteam-member-block-tab {
+  width: 100%;
+}
+.yourteam-member-block-tab .search-tab-avatar {
+  padding: 1rem 0;
+}
+.yourteam-member-block-tab table {
+  border-collapse: collapse;
+  border: 1px solid #00a5ff;
+  width: 100%;
+}
+.yourteam-member-block-tab table th,
+.yourteam-member-block-tab table td {
+  padding: 0 4rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: center;
+  border-right: 1px solid #00a5ff;
+}
+.yourteam-member-block-tab table th {
+  padding: 2.5rem 4rem;
+}
+.yourteam-member-block-tab table td h2 {
+  margin-left: 6rem;
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+/* Личный кабинет */
+.personalarea {
+  padding-top: 1rem;
+  padding-bottom: 15rem;
+  background: url(../img/search/bg.jpg) center no-repeat;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+}
+.personalarea .logo {
+  padding-top: 2rem;
+  position: relative;
+}
+.personalarea .logo:before {
+  content: '';
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  top: 17rem;
+  left: -13rem;
+  background: url(../img/search/1.png) center no-repeat;
+  background-size: cover;
+}
+.personalarea .logo:after {
+  content: '';
+  position: absolute;
+  width: 20rem;
+  height: 35rem;
+  top: 46rem;
+  right: -100rem;
+  background: url(../img/search/2.png) center no-repeat;
+  background-size: cover;
+}
+.personalarea .avatar {
+  padding-top: 2rem;
+  text-align: left;
+}
+.personalarea .avatar-img {
+  padding: 2rem 0;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 5px solid #213f71;
+  box-shadow: #1e2852 0 0 24px 12px;
+  background: url(../img/search/avatar.png) center center no-repeat;
+  background-size: 100%;
+}
+.personalarea .avatar-name .dropdown {
+  padding-top: 1rem;
+}
+.personalarea .avatar-name .dropdown btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+.personalarea .avatar-name .dropdown-menu {
+  font-size: 1.8rem;
+  color: #ffffff;
+  background-color: transparent;
+  left: 0.8rem;
+  border: none;
+  border-radius: none;
+  box-shadow: none;
+}
+.personalarea h1 {
+  margin-top: 5.8rem;
+}
+
+/*style for create*/
+
+.create {
+  padding-top: 1rem;
+  padding-bottom: 15rem;
+  background: url(../img/search/bg.jpg) center no-repeat;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+}
+
+#image-files {
+ display: none; 
+}
+
+.foto__dvnl {
+  font-family: 'Upheaval Pro', sans-serif;
+  color: #fff;
+  position: relative;
+  top: 10px;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.create .avatar {
+  margin-top: 3rem;
+  text-align: center;
+}
+.create .avatar-img {
+  margin: 0 auto;
+}
+.create .avatar-name .dropdown btn {
+  font-size: 1.3rem;
+}
+.create .avatar-name .dropdown-menu {
+  font-size: 1.3rem;
+}
+.create h1 {
+  font-size: 3rem;
+}
+.create-block-avatar .btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.create-block-form {
+  margin-top: 0;
+  text-align: center;
+}
+.create-block-form .btn {
+  float: right;
+  margin-top: 15px;;
+}
+
+
+
+/* Страница ваша команда (как видит участник) */
+/*.yourteam-member {
+  padding-top: 1rem;
+  padding-bottom: 15rem;
+  background: url(../img/search/bg.jpg) center no-repeat;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+}
+.yourteam-member .logo {
+  padding-top: 2rem;
+  position: relative;
+}
+.yourteam-member .logo:before {
+  content: '';
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  top: 17rem;
+  left: -13rem;
+  background: url(../img/search/1.png) center no-repeat;
+  background-size: cover;
+}
+.yourteam-member .logo:after {
+  content: '';
+  position: absolute;
+  width: 20rem;
+  height: 35rem;
+  top: 46rem;
+  right: -100rem;
+  background: url(../img/search/2.png) center no-repeat;
+  background-size: cover;
+}
+.yourteam-member .avatar {
+  padding-top: 2rem;
+  text-align: left;
+}
+.yourteam-member .avatar-img {
+  padding: 2rem 0;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 5px solid #213f71;
+  box-shadow: #1e2852 0 0 24px 12px;
+  background: url(../img/search/avatar.png) center center no-repeat;
+  background-size: 100%;
+}
+.yourteam-member .avatar-name .dropdown {
+  padding-top: 1rem;
+}
+.yourteam-member .avatar-name .dropdown btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+.yourteam-member .avatar-name .dropdown-menu {
+  font-size: 1.8rem;
+  color: #ffffff;
+  background-color: transparent;
+  left: 0.8rem;
+  border: none;
+  border-radius: none;
+  box-shadow: none;
+}
+.yourteam-member h1 {
+  margin-top: 5.8rem;
+}
+.yourteam-member-block {
+  margin-top: 9rem;
+}
+.yourteam-member-block-profile {
+  padding: 4.5rem 3.5rem;
+  text-align: center;
+  width: 100%;
+  background-color: #141731;
+  border-radius: 1rem;
+}
+.yourteam-member-block-profile h2 {
+  position: relative;
+  margin: 0;
+  font-family: 'Upheaval Pro', sans-serif;
+  font-size: 3.6rem;
+  font-style: italic;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 4px #101026;
+  color: #0094ff;
+}
+.yourteam-member-block-profile-avatar-img {
+  position: relative;
+  margin-top: 5rem;
+  display: inline-block;
+  width: 13.5rem;
+  height: 13.5rem;
+  border-radius: 50%;
+  border: 5px solid #4e2c59;
+  box-shadow: #31254d 0 0 40px 12px;
+  background: url(../img/create/ava.png) center center no-repeat;
+  background-size: 100%;
+}
+.yourteam-member-block-profile h3 {
+  margin-top: 5.5rem;
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+.yourteam-member-block-profile a {
+  font-size: 1.8rem;
+  color: #0a8ef0;
+  text-decoration: underline;
+}
+.yourteam-member-block-profile a:hover {
+  color: #36a5f7;
+}
+.yourteam-member-block-profile p {
+  position: relative;
+  margin-top: 2.5rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+.yourteam-member-block-profile .btn {
+  margin-top: 4.5rem;
+  font-size: 1.8rem;
+  background-color: transparent;
+  width: 20.2rem;
+  display: inline-block;
+  background-size: 100%;
+}
+.yourteam-member-block-profile .btn:hover {
+  background: url(../yourteam/btn.png) center no-repeat;
+}
+.yourteam-member-block-profile .btn a {
+  text-decoration: none;
+  color: #0e0023;
+  transition: all 0.5s;
+}
+.yourteam-member-block-profile .btn a:hover {
+  color: #00fffc;
+}
+.yourteam-member-block-tab {
+  width: 100%;
+}
+.yourteam-member-block-tab .search-tab-avatar {
+  padding: 1rem 0;
+}
+.yourteam-member-block-tab table {
+  border-collapse: collapse;
+  border: 1px solid #00a5ff;
+  width: 100%;
+}
+.yourteam-member-block-tab table th,
+.yourteam-member-block-tab table td {
+  padding: 0 4rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: center;
+  border-right: 1px solid #00a5ff;
+}
+.yourteam-member-block-tab table th {
+  padding: 2.5rem 4rem;
+}
+.yourteam-member-block-tab table td h2 {
+  margin-left: 6rem;
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 400;
+}*/
+/* Личный кабинет */
+
+
+
+
+
+.personalarea {
+  padding-top: 1rem;
+  padding-bottom: 15rem;
+  background: url(../img/search/bg.jpg) center no-repeat;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+}
+.personalarea .logo {
+  padding-top: 2rem;
+  position: relative;
+}
+.personalarea .logo:before {
+  content: '';
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  top: 17rem;
+  left: -13rem;
+  background: url(../img/search/1.png) center no-repeat;
+  background-size: cover;
+}
+.personalarea .logo:after {
+  content: '';
+  position: absolute;
+  width: 20rem;
+  height: 35rem;
+  top: 46rem;
+  right: -100rem;
+  background: url(../img/search/2.png) center no-repeat;
+  background-size: cover;
+}
+.personalarea .avatar {
+  padding-top: 2rem;
+  text-align: left;
+}
+.personalarea .avatar-img {
+  padding: 2rem 0;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 5px solid #213f71;
+  box-shadow: #1e2852 0 0 24px 12px;
+  background: url(../img/search/avatar.png) center center no-repeat;
+  background-size: 100%;
+}
+.personalarea .avatar-name .dropdown {
+  padding-top: 1rem;
+}
+.personalarea .avatar-name .dropdown btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+.personalarea .avatar-name .dropdown-menu {
+  font-size: 1.8rem;
+  color: #ffffff;
+  background-color: transparent;
+  left: 0.8rem;
+  border: none;
+  border-radius: none;
+  box-shadow: none;
+}
+.personalarea h1 {
+  margin-top: 5.8rem;
+}
+.personalarea-block {
+  margin-top: 9.5rem;
+}
+.personalarea-block-left {
+  width: 100%;
+  padding: 2.5rem 4rem 8rem 5rem;
+  border: 1px solid #00a5ff;
+}
+.personalarea-block-left h2 {
+  margin: 0;
+  font-family: 'Upheaval Pro', sans-serif;
+  font-size: 4.8rem;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #0094ff;
+}
+.personalarea-block-left .panel {
+  background-color: transparent;
+  border: none;
+  text-align: left;
+}
+.personalarea-block-left .panel-heading {
+  background-color: transparent;
+  padding: 0;
+}
+.personalarea-block-left .panel-heading h3 {
+  margin-top: 3rem;
+  font-size: 2.4rem;
+  color: #ffffff;
+}
+.personalarea-block-left .panel-heading h3 span {
+  margin-left: 2rem;
+}
+.personalarea-block-left .panel-heading h4 {
+  margin-top: 3.5rem;
+  position: relative;
+}
+.personalarea-block-left .panel-heading h4 a {
+  font-size: 2.4rem;
+  color: #0094ff;
+  border: none;
+  background-color: transparent;
+}
+.personalarea-block-left .panel-heading h4 a:hover,
+.personalarea-block-left .panel-heading h4 a:focus,
+.personalarea-block-left .panel-heading h4 a:active {
+  text-decoration: none;
+}
+.personalarea-block-left .panel-heading h4 a:after {
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background: url(../img/point.png) center no-repeat;
+  top: 1rem;
+  right: 12rem;
+}
+.personalarea-block-left .panel-collapse .panel-body {
+  border: none;
+  padding: 0;
+}
+.personalarea-block-left .panel-collapse .panel-body ul {
+  list-style: none;
+  background-color: transparent;
+  border: none;
+}
+.personalarea-block-left .panel-collapse .panel-body ul li {
+  color: #ffffff;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+}
+.personalarea-block-left .panel-collapse .panel-body ul li span {
+  margin-left: 4rem;
+}
+.personalarea-block-left .dropdown1-item-1,
+.personalarea-block-left .dropdown2-item-1,
+.personalarea-block-left .dropdown3-item-1 {
+  position: relative;
+}
+.personalarea-block-left .dropdown1-item-1:after,
+.personalarea-block-left .dropdown2-item-1:after,
+.personalarea-block-left .dropdown3-item-1:after {
+  content: '';
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(../img/plus.png) center no-repeat;
+  background-size: cover;
+  top: 0.5rem;
+  right: -3rem;
+}
+.personalarea-block-left .dropdown1-item-2,
+.personalarea-block-left .dropdown2-item-2,
+.personalarea-block-left .dropdown3-item-2 {
+  position: relative;
+}
+.personalarea-block-left .dropdown1-item-2:after,
+.personalarea-block-left .dropdown2-item-2:after,
+.personalarea-block-left .dropdown3-item-2:after {
+  content: '';
+  position: absolute;
+  width: 1.6rem;
+  height: 1.2rem;
+  background: url(../img/ok.png) center no-repeat;
+  background-size: cover;
+  top: 0.5rem;
+  right: -3rem;
+}
+.personalarea-block-left .dropdown1-item-3,
+.personalarea-block-left .dropdown2-item-3,
+.personalarea-block-left .dropdown3-item-3 {
+  position: relative;
+}
+.personalarea-block-left .dropdown1-item-3:after,
+.personalarea-block-left .dropdown2-item-3:after,
+.personalarea-block-left .dropdown3-item-3:after {
+  content: '';
+  position: absolute;
+  width: 1.6rem;
+  height: 1.2rem;
+  background: url(../img/ok.png) center no-repeat;
+  background-size: cover;
+  top: 0.5rem;
+  right: -3rem;
+}
+.personalarea-block-left .dropdown1-item-4,
+.personalarea-block-left .dropdown2-item-4,
+.personalarea-block-left .dropdown3-item-4 {
+  position: relative;
+}
+.personalarea-block-left .dropdown1-item-4:after,
+.personalarea-block-left .dropdown2-item-4:after,
+.personalarea-block-left .dropdown3-item-4:after {
+  content: '';
+  position: absolute;
+  width: 1.6rem;
+  height: 1.2rem;
+  background: url(../img/ok.png) center no-repeat;
+  background-size: cover;
+  top: 0.5rem;
+  right: -3rem;
+}
+.personalarea-block-left .dropdown1-item-5,
+.personalarea-block-left .dropdown2-item-5,
+.personalarea-block-left .dropdown3-item-5 {
+  position: relative;
+}
+.personalarea-block-left .dropdown1-item-5:after,
+.personalarea-block-left .dropdown2-item-5:after,
+.personalarea-block-left .dropdown3-item-5:after {
+  content: '';
+  position: absolute;
+  width: 1.6rem;
+  height: 1.2rem;
+  background: url(../img/ok.png) center no-repeat;
+  background-size: cover;
+  top: 0.5rem;
+  right: -3rem;
+}
+.personalarea-block-left .dropdown1-item-6,
+.personalarea-block-left .dropdown2-item-6,
+.personalarea-block-left .dropdown3-item-6 {
+  position: relative;
+}
+.personalarea-block-left .dropdown1-item-6:after,
+.personalarea-block-left .dropdown2-item-6:after,
+.personalarea-block-left .dropdown3-item-6:after {
+  content: '';
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(../img/plus.png) center no-repeat;
+  background-size: cover;
+  top: 0.5rem;
+  right: -3rem;
+}
+.personalarea-block-left .dropdown1-item-7,
+.personalarea-block-left .dropdown2-item-7,
+.personalarea-block-left .dropdown3-item-7 {
+  position: relative;
+}
+.personalarea-block-left .dropdown1-item-7:after,
+.personalarea-block-left .dropdown2-item-7:after,
+.personalarea-block-left .dropdown3-item-7:after {
+  content: '';
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(../img/plus.png) center no-repeat;
+  background-size: cover;
+  top: 0.5rem;
+  right: -3rem;
+}
+.personalarea-block-left .dropdown2-item-1 {
+  position: relative;
+}
+.personalarea-block-left .dropdown2-item-1:after {
+  content: '';
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(../img/plus.png) center no-repeat;
+  background-size: cover;
+  top: 0.5rem;
+  right: -3rem;
+}
+.personalarea-block-left .dropdown2-item-2 {
+  position: relative;
+}
+.personalarea-block-left .dropdown2-item-2:after {
+  content: '';
+  position: absolute;
+  width: 1.6rem;
+  height: 1.2rem;
+  background: url(../img/ok.png) center no-repeat;
+  background-size: cover;
+  top: 0.5rem;
+  right: -3rem;
+}
+.personalarea-block-left .dropdown2-item-3 {
+  position: relative;
+}
+.personalarea-block-left .dropdown2-item-3:after {
+  display: none;
+  content: '';
+}
+.personalarea-block-left .dropdown2-item-4 {
+  position: relative;
+}
+.personalarea-block-left .dropdown2-item-4:after {
+  content: '';
+  position: absolute;
+  width: 1.3rem;
+  height: 1.7rem;
+  background: url(../img/key.png) center no-repeat;
+  background-size: cover;
+  top: 0.5rem;
+  right: -3rem;
+}
+.personalarea-block-left .dropdown2-item-5 {
+  position: relative;
+}
+.personalarea-block-left .dropdown2-item-5:after {
+  content: '';
+  position: absolute;
+  width: 1.3rem;
+  height: 1.7rem;
+  background: url(../img/key.png) center no-repeat;
+  background-size: cover;
+  top: 0.5rem;
+  right: -3rem;
+}
+.personalarea-block-left .dropdown2-item-6 {
+  position: relative;
+}
+.personalarea-block-left .dropdown2-item-6:after {
+  content: '';
+  position: absolute;
+  width: 1.3rem;
+  height: 1.7rem;
+  background: url(../img/key.png) center no-repeat;
+  background-size: cover;
+  top: 0.5rem;
+  right: -3rem;
+}
+.personalarea-block-left .dropdown2-item-7 {
+  position: relative;
+}
+.personalarea-block-left .dropdown2-item-7:after {
+  content: '';
+  position: absolute;
+  width: 1.3rem;
+  height: 1.7rem;
+  background: url(../img/key.png) center no-repeat;
+  background-size: cover;
+  top: 0.5rem;
+  right: -3rem;
+}
+.personalarea-block-profile {
+  width: 100%;
+  padding: 3rem 6rem;
+  background-color: #141731;
+  border-radius: 1rem;
+  text-align: center;
+}
+.personalarea-block-profile-avatar {
+  position: relative;
+  display: inline-block;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  border: 5px solid #4e2c59;
+  box-shadow: #31254d 0 0 40px 12px;
+  background: url(../img/avatar.png) center center no-repeat;
+  background-size: 100%;
+}
+.personalarea-block-profile-avatar:after {
+  content: '';
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  background: url(../img/yourteam/pen2.png) center no-repeat;
+  background-size: cover;
+  bottom: 0.5rem;
+  right: 0;
+}
+.personalarea-block-profile h3 {
+  position: relative;
+  font-family: 'Upheaval Pro', sans-serif;
+  font-size: 2.4rem;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #ff589f;
+}
+.personalarea-block-profile h3:after {
+  content: '';
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url(../img/yourteam/pen.png) center no-repeat;
+  background-size: cover;
+  top: 0.5rem;
+  right: -2.5rem;
+}
+.personalarea-block-team {
+  width: 100%;
+  padding: 3rem 6rem;
+  background-color: #141731;
+  border-radius: 1rem;
+  text-align: center;
+}
+.personalarea-block-team-avatar {
+  position: relative;
+  display: inline-block;
+  width: 13.5rem;
+  height: 13.5rem;
+  border-radius: 50%;
+  border: 5px solid #4e2c59;
+  box-shadow: #31254d 0 0 40px 12px;
+  background: url(../img/create/ava.png) center center no-repeat;
+  background-size: 100%;
+}
+.personalarea-block-team h3 {
+  position: relative;
+  font-family: 'Upheaval Pro', sans-serif;
+  font-size: 2.4rem;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #ff589f;
+}
+.personalarea-block-team .btn {
+  width: 25rem;
+  height: 5rem;
+  background: url(../img/btn.png) center no-repeat;
+  line-height: 4rem;
+}
+.personalarea-block-team .btn:hover {
+  background: url(../img/btn-hover.png) center no-repeat;
+}
+.personalarea-block-team .btn a {
+  font-size: 1.4rem;
+  color: #000!important
+}
+.personalarea-block-btn {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 3rem 1rem;
+  background-color: #141731;
+  border-radius: 1rem;
+  text-align: center;
+}
+.personalarea-block-btn .btn {
+  margin-top: 0;
+  display: inline-block;
+}
+.personalarea-block-mission {
+  margin-top: 2rem;
+  padding: 4rem 6rem;
+  width: 100%;
+  background-color: #141731;
+  border-radius: 1rem;
+  text-align: center;
+}
+.personalarea-block-mission-img {
+  margin: 0 auto;
+  margin-top: 1rem;
+  width: 22rem;
+  height: 16rem;
+  background: url(../img/1.png) center no-repeat;
+  background-size: cover;
+}
+.personalarea-block-mission-body h3 {
+  margin: 0;
+  text-align: left;
+  font-family: 'Upheaval Pro', sans-serif;
+  font-size: 3rem;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #0094ff;
+}
+.personalarea-block-mission-body p {
+  margin: 0;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+  text-align: left;
+}
+.personalarea-block-mission-form {
+  margin-top: 5.5rem;
+}
+.personalarea-block-mission-form form label {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+.personalarea-block-mission-form form .timer label {
+  display: block;
+}
+.personalarea-block-mission-form form .timer p {
+  margin-right: 2rem;
+  position: relative;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+.personalarea-block-mission-form form .timer p span {
+  display: block;
+  font-size: 3.6rem;
+  font-family: 'Upheaval Pro', sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #ff3630;
+}
+.personalarea-block-mission-form form .timer p .point {
+  position: absolute;
+  top: -6rem;
+}
+.personalarea-block-mission-form form .btn {
+  margin-top: 4rem;
+  position: relative;
+}
+.personalarea-block-mission-form form .btn:before {
+  content: '';
+  position: absolute;
+  width: 70rem;
+  height: 1px;
+  background-color: #ffffff;
+  top: -3rem;
+  left: -45rem;
+}
+
+
+
+/* begin media for your team*/
+
+@media (max-width: 1199px) {
+  .registration-block .btn {
+    width: 22rem;
+  }
+  .registration-block .btn:before {
+    width: 21.5rem;
+  }
+  .search .logo:before,
+  .create .logo:before,
+  .yourteam .logo:before,
+  .yourteam-member .logo:before,
+  .personalarea .logo:before {
+    left: -11rem;
+  }
+  .search .logo:after,
+  .create .logo:after,
+  .yourteam .logo:after,
+  .yourteam-member .logo:after,
+  .personalarea .logo:after {
+    right: -81rem;
+  }
+  .search .avatar-name .dropdown {
+    text-align: center;
+  }
+  .search .avatar-name .dropdown-menu {
+    left: 3.3rem;
+  }
+  .create .avatar-name .dropdown {
+    text-align: center;
+  }
+  .create .avatar-name .dropdown-menu {
+    left: 3.3rem;
+  }
+  .yourteam-block-profile,
+  .yourteam-member-block-profile {
+    padding: 4.5rem 2rem;
+  }
+  .yourteam-block-tab table th,
+  .yourteam-member-block-tab table th,
+  .yourteam-block-tab table td,
+  .yourteam-member-block-tab table td {
+    padding: 0px 2rem;
+  }
+  .yourteam-block-tab table th,
+  .yourteam-member-block-tab table th {
+    padding: 1.5rem 1rem;
+  }
+  .yourteam-block-tab .search-tab-avatar-name,
+  .yourteam-member-block-tab .search-tab-avatar-name {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 991px) {
+  .search .logo:before,
+  .create .logo:before,
+  .yourteam .logo:before,
+  .yourteam-member .logo:before,
+  .personalarea .logo:before {
+    display: none;
+  }
+  .search .logo:after,
+  .create .logo:after,
+  .yourteam .logo:after,
+  .yourteam-member .logo:after,
+  .personalarea .logo:after {
+    display: none;
+  }
+  .search h1 {
+    font-size: 4rem;
+    margin-top: 0;
+  }
+  .search-tab {
+    margin-left: 0;
+  }
+  .search .avatar-name .dropdown {
+    text-align: center;
+  }
+  .search .avatar-name .dropdown btn {
+    font-size: 1.5rem;
+  }
+  .search .avatar-name .dropdown-menu {
+    font-size: 1.5rem;
+  }
+  .create h1 {
+    font-size: 4rem;
+  }
+  .create .avatar-name .dropdown {
+    text-align: center;
+  }
+  .create .avatar-name .dropdown btn {
+    font-size: 1.5rem;
+  }
+  .create .avatar-name .dropdown-menu {
+    font-size: 1.5rem;
+  }
+  .yourteam-block-tab {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .group__right {
+    flex-basis: 100%;
+    order: 0
+  }
+
+  .group__left {
+    flex-basis: 100%;
+    order: 1
+  }
+
+  .group__btn {
+    -webkit-order: 3;
+        -ms-order: 3;
+            order: 3;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .form-btn {
+    margin-bottom: 15px;
+  }
+
+  .registration {
+    padding-bottom: 3rem;
+  }
+  .registration-block {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+  .registration-block h1 {
+    margin-top: 2rem;
+    font-size: 4rem;
+  }
+  .registration-block-form {
+    margin-top: 1rem;
+  }
+  .search {
+    padding-bottom: 3rem;
+  }
+  .search .avatar {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .search .avatar-img {
+    margin: 0 auto;
+  }
+  .search .avatar-name .dropdown btn {
+    font-size: 1.3rem;
+  }
+  .search .avatar-name .dropdown-menu {
+    font-size: 1.3rem;
+  }
+  .search h1 {
+    font-size: 3rem;
+  }
+  .search form input {
+    width: 85%;
+    margin-left: 0;
+    margin-bottom: 20px;;
+  }
+/*  .search form .btn {
+    right: -0.5rem;
+  }*/
+  .search-tab table {
+    overflow-x: scroll;
+    overflow-x: auto;
+    display: block;
+  }
+  .search-tab table td h2 {
+    font-size: 1.1rem;
+    margin-left: 0;
+    text-align: center;;;
+  }
+  .search-tab-avatar {
+    text-align: center;
+    margin-left: -1rem;
+  }
+/*  .search-tab-avatar-img-one,
+  .search-tab-avatar-img-two,
+  .search-tab-avatar-img-three,
+  .search-tab-avatar-img-four,
+  .search-tab-avatar-img-five {
+    display: block;
+  }*/
+  .search-tab-avatar-name {
+    padding: 0 4rem;
+  }
+}
+
+
+@media only screen and (max-width: 1199px) {
+  .yourteam-block-tab table td h2,
+  .yourteam-member-block-tab table td h2 {
+    margin-left: 4rem;
+  }  
+}
+
+
+
+@media only screen and (max-width: 425px) {
+  .search .logo:after {
+    display: none;
+  }
+  
+  .yourteam-block-tab table th {
+    padding: 10px;
+  }
+
+  .user__avatar {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #213f71;
+  }
+
+  .yourteam-block-tab table td h2, .yourteam-member-block-tab table td h2 {
+    margin: 0;
+    font-size: 12px;;
+  }
+
+  .yourteam-member-block-tab table th {
+    padding: 10px;
+  }
+
+  .personalarea .logo:after {
+    display: none;
+  }
+
+  .personalarea-block {
+    margin-top: 10px;
+  }
+  .personalarea h1 {
+    margin-top: 1.8rem;
+    font-size: 3.8rem;
+  }
+  .personalarea-block-btn .btn {
+    margin-bottom: 10px;
+  }
+
+  .yourteam-member-block {
+    margin-top: 0;
+  }
+
+}
+
+/*end media for your team*/
+
+
+
